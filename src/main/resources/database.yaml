@@ -1,0 +1,40 @@
+# Registration config (MySQL 3307)
+registration:
+  datasource:
+    url: jdbc:mysql://localhost:3307/registration
+    username: user
+    password: user
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa.properties.hibernate.hbm2ddl.auto: update
+
+
+# Catalog config (MySQL 3308)
+catalog:
+  datasource:
+    url: jdbc:mysql://localhost:3308/catalog
+    username: user
+    password: user
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa.properties.hibernate.hbm2ddl.auto: update
+  # Catalog config (Redis 6380)
+  redis:
+    host: localhost
+    port: 6380
+
+
+# Metadata config (Mongo 27018)
+spring.mongodb.representation.uuid: standard
+
+
+# Ticketing config (Postgres 5433)
+ticketing:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/ticketing
+    username: user
+    password: user
+    driver-class-name: org.postgresql.Driver
+  jpa.properties.hibernate.hbm2ddl.auto: update
+  # Ticketing config (Redis 6381)
+  redis:
+    host: localhost
+    port: 6381
